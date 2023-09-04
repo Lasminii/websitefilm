@@ -1,171 +1,178 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <style>
+    .jumbotron {
+      padding-top: 2rem;
+      background-color: plum;
+    }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    .projects {
+      padding-top: 2rem;
+      background-color: plum;
+    }
 
-    <title>Spartapedia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            font-family: 'PT Sans', sans-serif;
-
-        }
-
-        .mytitle {
-            width: 100%;
-            height: 250px;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
-            background-position: center;
-            background-size: cover;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mytitle>button {
-            width: 200px;
-            height: 50px;
-            background-color: transparent;
-            color: white;
-            border-radius: 50px;
-            border: 1px solid white;
-            margin-top: 10px;
-        }
-
-        .mytitle>button:hover {
-            border: 2px solid white;
-        }
-
-        .mycards {
-            margin: 20px auto 0px auto;
-            width: 95%;
-            max-width: 1200px;
-        }
-
-        .mycomment {
-            color: gray;
-        }
-
-        .mypost {
-            width: 95%;
-            max-width: 500px;
-            margin: 20px auto 0px auto;
-            padding: 20px;
-            box-shadow: 0px 0px 3px 0px;
-        }
-
-        .mybtns {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .mybtns > button {
-            margin-right: 10px;
-        }
-    </style>
+    .foto {
+      padding-top: 2rem;
+      background-color: plum;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="mytitle">
-        <h1>My favorite movies</h1>
-        <button>Save a new movie</button>
+
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
     </div>
-    <div class="mypost">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Enter Movie URL">
-            <label for="floatingInput">Movie URL</label>
-        </div>
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">Starts</label>
-            <select class="form-select" id="inputGroupSelect01">
-                <option selected>-- Select a rating --</option>
-                <option value="1">⭐</option>
-                <option value="2">⭐⭐</option>
-                <option value="3">⭐⭐⭐</option>
-                <option value="4">⭐⭐⭐⭐</option>
-                <option value="5">⭐⭐⭐⭐⭐</option>
-            </select>
-        </div>
-        <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Comment</label>
-        </div>
-        <di class="mybtns">
-            <button type="button" class="btn btn-dark">Save</button>
-            <button type="button" class="btn btn-outline-dark">Close</button>
-        </di>
     </div>
-    <div class="mycards">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Amazing Movie</h5>
-                        <p class="card-text">This is a fake description of this great movie!</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">This is a fake comment</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Amazing Movie</h5>
-                        <p class="card-text">This is a fake description of this great movie!</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">This is a fake comment</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Amazing Movie</h5>
-                        <p class="card-text">This is a fake description of this great movie!</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">This is a fake comment</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Amazing Movie</h5>
-                        <p class="card-text">This is a fake description of this great movie!</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">This is a fake comment</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </nav>
+  <!-- akhir navbar-->
+
+  <!--Profile Section-->
+  <section class="foto text-center">
+    <img src="img/lasmini.jpeg" alt="Lasmini" width="200" class="rounded-circle img-thumbnail" />
+ 
+    <h1 class="display-4">Welcome to my Portfolio</h1>
+
+    <p class="lead">.</p>
+    </div>
     </div>
 
+    <!--about-->
+    <section class="bg-white">
+      <div class="container">
+        <h2 class="text-center mb-5"></h2>
+        <div class="row">
+          <div class="col-md-4 mb-5 border py-3">
+            <img class="img-fluid" src="images/lasmini.png" alt="" />
+            <h3 class="mb-3">About me</h3>
+            <p>Perkenalkan Nama Saya Lasmini, saya merupakan Mahasiswa aktif semester7 Jurusan Manajemen Informatika di
+              Politeknik Negeri Sriwijaya Palembang. Saya merupakan anak pertama dari dua bersaudara, saya juga memiliki
+              beberapa hobi seperti berenang, bermain badminton dan mendengarkan musik.</p>
+            <a class="btn btn-primary" href="#">View Project</a>
+          </div>
+          <div class="col-md-4 mb-5 border py-3">
+            <img src="images/sertifikatkp.jpg" alt="" />
+            <h3 class="mb-3">Skill</h3>
+            <p>Saya merupakan pribadi yang bertanggung jawab, leadership, . Beberapa bahasa pemograman yang pernah 
+              saya pelajari diantara nya : HTML, Css, Pyhton, Golang.</p>
+            <a class="btn btn-primary" href="#">View Project</a>
+          </div>
+          <div class="col-md-4 mb-5 border py-3">
+            <img class="img-fluid" src="images/project-3.png" alt="" />
+            <h3 class="mb-3">Experience</h3>
+            <p>
+              Saya memiliki pengalaman kerja praktek dari saya duduk di Sekolah Menengah Kejurusan. Kerja praktek yg
+              pertama saya lakukan di salah satu Televisi daerah yaitu Tvri Sumsel, Kedua saya kerja praktek di kantor
+              pemerintahan yakni Kantor Gubernur Prov. Sumatera Selatan. Dan yang terakhir saya melaksanakan kerja praktek di PT Pupuk Urea
+              yang ada di Palembang yang bernama PT.Pupuk Sriwidjaja
+            </p>
+            <a class="btn btn-primary" href="#">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Akhir About-->
+
+    <!--Akhir Project-->
+    <section class="bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Contact Me</h2>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Contact-->
+    <footer class="text-center text-white" style="background-color: #f1f1f1">
+      <!-- Grid container -->
+      <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+          <!-- Google -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+          <!-- Github -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!--Akhir Contact-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
-
